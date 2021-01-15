@@ -3,10 +3,28 @@ session_start() ;
 include "php/config.php";
 if (!isset($_SESSION['user_id'])) {
 	header("location:home.php") ;
+	
 }
+
+
 ?>
 
-<?php include "addition/header.php";?>
+
+<?php include "addition/header.php";
+$userid= $_SESSION['user_id'];
+
+if(isset($_POST['btn'])){
+	$postid=$_POST['postid'];
+	$sql = "UPDATE posts SET `state`='1',`help_id`=$userid WHERE id=$postid ";
+if(mysqli_query($conn, $sql)){
+    echo "Records were updated successfully.";
+} else {
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
+}
+ 
+}
+
+?>
 
 <div class="col-xl-12">
 	<div class="col-xl-12">
@@ -64,8 +82,13 @@ while($data1 = mysqli_fetch_assoc($q1)){
 				<div class="freelancer-details">
 					<div class="freelancer-details-list">
 						<p><?php echo $body; ?></p>
+						<form method ="post">
+						<input type ="text" value="<?php echo $data1['id'];?>" name="postid" style="display: none;">
+						<input type="submit" name="btn" value="Help" class="js-click" class="btn btn-success mt-4" style="width:100%;">
+						</form> 
 					</div>
-					<a href="" class="button button-sliding-icon ripple-effect">help<i class="icon-material-outline-arrow-right-alt"></i></a>
+					
+					
 				</div>
 			</div>
 				<!-- Freelancer / End -->

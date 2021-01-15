@@ -49,7 +49,7 @@ if (isset($_POST['btn'])) {
 						<i class="icon-material-outline-lock"></i>
 						<input type="password" class="input-text with-border" name="pass" id="password" placeholder="Password" required/>
 					</div>
-					<input type="submit" name="btn" value="Login" class="btn btn-success mt-4">
+					<input type="submit" name="btn" value="Login" class="btn btn-success mt-4" style="width:100%;">
 					
 				</form>
 				

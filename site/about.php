@@ -1,31 +1,16 @@
 <?php include "addition/header.php";?>
 <!-- Titlebar
 ================================================== -->
-<div class="single-page-header" data-background-image="images/single-company.jpg">
+<div class="single-page-header">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="single-page-header-inner">
 					<div class="left-side">
-						<div class="header-image"><img src="images/browse-companies-03.png" alt=""></div>
+						<div class="header-image"><img src="images/logo.png" alt=""></div>
 						<div class="header-details">
-							<h3>Acodia <span>Software House</span></h3>
-							<ul>
-								<li><div class="star-rating" data-rating="4.9"></div></li>
-								<li><img class="flag" src="images/flags/de.svg" alt=""> Germany</li>
-								<li><div class="verified-badge-with-title">Verified</div></li>
-							</ul>
+							<h3>ANA LAK/ انا لك <span>Social media site for help</span></h3>
 						</div>
-					</div>
-					<div class="right-side">
-						<!-- Breadcrumbs -->
-						<nav id="breadcrumbs" class="white">
-							<ul>
-								<li><a href="#">Home</a></li>
-								<li><a href="#">Browse Companies</a></li>
-								<li>Acodia</li>
-							</ul>
-						</nav>
 					</div>
 				</div>
 			</div>
@@ -40,74 +25,28 @@
 	<div class="row">
 		
 		<!-- Content -->
-		<div class="col-xl-8 col-lg-8 content-right-offset">
+		<div class="col-xl-12">
 
-			<div class="single-page-section">
-				<h3 class="margin-bottom-25">About Company</h3>
-				<p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+			<div class="single-page-section"style="background-image: url(images/about.png);
+ 										background-position: right ;
+  										background-repeat: no-repeat ;
+  										background-size: contain;">
+				<h3 class="margin-bottom-25">About website</h3>
+				<p>This project was developed to serve the local community of the blind.<br>
+                   As the loss of the sense of sight makes a person vulnerable to some difficulties in performing his daily work,<br> especially university students.
+				   Among the most prominent problems that may face them:</p>
+				   <ul>
+                   <li>	Inability to write on their college or school exams.</li>
+                   <li>	Inability to read due to the lack of books available in Braille.</li>
+				   <li>	Difficulty moving from one place to another.</li>
+                   </ul>
+                  <p> Through the site that we have developed,<br> it is possible to request 
+				   assistance and provide volunteers who provide their services and do the work to be accomplished.</p>
 
-				<p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
-			</div>
 			
-			<!-- Boxed List -->
-			<div class="boxed-list margin-bottom-60">
-				<div class="boxed-list-headline">
-					<h3><i class="icon-material-outline-business-center"></i> Open Positions</h3>
-				</div>
+			
 
-				<div class="listings-container compact-list-layout">
 					
-					<!-- Job Listing -->
-					<a href="single-job-page.html" class="job-listing">
-
-						<!-- Job Listing Details -->
-						<div class="job-listing-details">
-
-							<!-- Details -->
-							<div class="job-listing-description">
-								<h3 class="job-listing-title">Python Developer</h3>
-
-								<!-- Job Listing Footer -->
-								<div class="job-listing-footer">
-									<ul>
-										<li><i class="icon-material-outline-location-on"></i> Berlin</li>
-										<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-										<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
-									</ul>
-								</div>
-							</div>
-
-						</div>
-
-						<!-- Bookmark -->
-						<span class="bookmark-icon"></span>
-					</a>
-
-					<!-- Job Listing -->
-					<a href="single-job-page.html" class="job-listing">
-
-						<!-- Job Listing Details -->
-						<div class="job-listing-details">
-
-							<!-- Details -->
-							<div class="job-listing-description">
-								<h3 class="job-listing-title">Junior Full Stack Developer</h3>
-
-								<!-- Job Listing Footer -->
-								<div class="job-listing-footer">
-									<ul>
-										<li><i class="icon-material-outline-location-on"></i> Berlin</li>
-										<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-										<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
-									</ul>
-								</div>
-							</div>
-
-						</div>
-
-						<!-- Bookmark -->
-						<span class="bookmark-icon"></span>
-					</a>	
 				</div>
 
 			</div>
@@ -116,7 +55,7 @@
 			<!-- Boxed List -->
 			<div class="boxed-list margin-bottom-60">
 				<div class="boxed-list-headline">
-					<h3><i class="icon-material-outline-thumb-up"></i> Reviews</h3>
+					<h3><i class="icon-material-outline-thumb-up"></i> Type of users:</h3>
 				</div>
 				<ul class="boxed-list-ul">
 					<li>

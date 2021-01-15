@@ -11,6 +11,7 @@
 <!-- CSS
 ================================================== -->
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style2.css">
 <link rel="stylesheet" href="css/colors/blue.css">
 
 </head>
@@ -32,7 +33,7 @@
 				
 				<!-- Logo -->
 				<div id="logo">
-					<a href=""><img src="" alt="logo pic"></a>
+					<a href=""><img src="images/logo.png" alt="logo pic"></a>
 				</div>
 			<!-- Left Side Content / End -->
 
@@ -69,60 +70,26 @@
 <!-- Intro Banner
 ================================================== -->
 <!-- add class "disable-gradient" to enable consistent background overlay -->
-<div class="intro-banner" data-background-image="images/home-background.jpg">
+<div class="intro-banner" data-background-image="images/back.jpg" style="height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;">
+
 	<div class="container">
-		
-		
-		
-		<!-- Search Bar -->
-		<div class="row">
-			<div class="col-md-12">
-				<div class="intro-banner-search-form margin-top-95">
 
-					<!-- Search Field -->
-					<div class="intro-search-field with-autocomplete">
-						<label for="autocomplete-input" class="field-title ripple-effect">Where?</label>
-						<div class="input-with-icon">
-							<input id="autocomplete-input" type="text" placeholder="Online Job">
-							<i class="icon-material-outline-location-on"></i>
-						</div>
-					</div>
-
-					<!-- Search Field -->
-					<div class="intro-search-field">
-						<label for ="intro-keywords" class="field-title ripple-effect">What job you want?</label>
-						<input id="intro-keywords" type="text" placeholder="Job Title or Keywords">
-					</div>
-
-					<!-- Button -->
-					<div class="intro-search-button">
-						<button class="button ripple-effect" onclick="window.location.href='jobs-list-layout-full-page-map.html'">Search</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Stats -->
-		<div class="row">
-			<div class="col-md-12">
-				<ul class="intro-stats margin-top-45 hide-under-992px">
-					<li>
-						<strong class="counter">1,586</strong>
-						<span>Jobs Posted</span>
-					</li>
-					<li>
-						<strong class="counter">3,543</strong>
-						<span>Tasks Posted</span>
-					</li>
-					<li>
-						<strong class="counter">1,232</strong>
-						<span>Freelancers</span>
-					</li>
-				</ul>
-			</div>
-		</div>
-
+	<header>
+	<div class="overlay">
+		<h1>ANA LAK</h1>
+		<br>
+		<h3>Welcome to our site to help <span style="text-decoration: underline;">THE BLIND</span></h3>
+		<p>If you need help or would like to help others, you have found the right place for it.</p>
+		<br>
+		<button>READ MORE</button>
 	</div>
+	</header>
+
+</div>
 </div>
 
 

@@ -1,5 +1,7 @@
 Hiba - 14/1/2021
-* create "edit.txt" file
+    * create "edit.txt" file
 
 Hiba - 15/1/2021
-*Fix the error in "register.php & login.php" code 
+    * Fix the error in "register.php & login.php" code 
+    * Modify the design of the home page & about page 
+    * write code to help but I cant change the button state "index.php"

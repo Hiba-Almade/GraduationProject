@@ -44,7 +44,7 @@ if(isset($_POST['btn'])){
 			$sql = "INSERT INTO `users`( `fname`, `lname`, `email`, `pass`,`phone`,`type`) VALUES('$fname','$lname','$email','$pass','$phone','$type')" ;
 			$q = mysqli_query($conn , $sql) ;
 			if ($q) {
-				
+				$_SESSION['user_id'] = $q['id'] ;
 				if($type =='1'){
 
 					header("Location: index.php");
@@ -120,6 +120,6 @@ if(isset($_POST['btn'])){
 
 
 				<!-- Button -->
-				<input type="submit" name="btn" value="Register" class="btn btn-success mt-4">
+				<input type="submit" name="btn" value="Register" class="btn btn-success mt-4" style="width:100%;">
 	        </form>
 </div>
