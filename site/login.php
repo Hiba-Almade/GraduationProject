@@ -1,4 +1,5 @@
 <?php 
+ob_start();
 include 'php/config.php';
 session_start() ;
 

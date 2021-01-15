@@ -1,8 +1,10 @@
 <?php 
 
+ob_start();
 include 'php/config.php';
-	
+
 if(isset($_POST['btn'])){
+	
 	$fname = $_POST['fname'] ;
 	$lname = $_POST['lname'] ;
 	$email = $_POST['email'] ;
@@ -39,14 +41,17 @@ if(isset($_POST['btn'])){
             echo "Phone number must have 10 digits.";  
 		}
 		else {
-			$sql = "INSERT INTO `users`( `fname`, `lname`, `email`, `pass`,`phone`,`type`) VALUES 						('$fname','$lname','$email','$pass','$phone','$type')" ;
+			$sql = "INSERT INTO `users`( `fname`, `lname`, `email`, `pass`,`phone`,`type`) VALUES('$fname','$lname','$email','$pass','$phone','$type')" ;
 			$q = mysqli_query($conn , $sql) ;
 			if ($q) {
+				
 				if($type =='1'){
 
 					header("Location: index.php");
+					
 				}elseif ($type == '0') {
 					header("Location: index2.php");
+					
 				}else{
 					echo "Something wrong";
 				}

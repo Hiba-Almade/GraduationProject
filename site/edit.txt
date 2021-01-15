@@ -1,1 +1,5 @@
 Hiba - 14/1/2021
+* create "edit.txt" file
+
+Hiba - 15/1/2021
+*Fix the error in "register.php & login.php" code 
