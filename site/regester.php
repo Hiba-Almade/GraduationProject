@@ -12,7 +12,7 @@ if(isset($_POST['btn'])){
 	$pass2 = $_POST['pass2'] ;
 	$phone=$_POST['phone'] ;
 	$type;
-	if (isset($_POST['check'])){  
+	if (isset($_POST['check'])){
             $type='1';
     } else {  
             $type='0';
@@ -26,25 +26,54 @@ if(isset($_POST['btn'])){
 		$data2 = mysqli_fetch_assoc($q2) ;
 		$count = mysqli_num_rows($q2) ;
 		if ($count == 1) {
-			echo "This Email already exists, choose another one";	
+			// echo "This Email already exists, choose another one";	
+			echo '<script>document.getElementById("alertta").style.display="block";
+			document.getElementById("alertta").textContent="This Email already exists, choose another one";</script>';
+			unset($_POST['btn']);
 		}
 		elseif ($pass!==$pass2) {
-			echo "Password and Confirm password should match!";
+			// echo "Password and Confirm password should match!";
+			echo '<script>document.getElementById("alertta").style.display="block";
+			document.getElementById("alertta").textContent="Password and Confirm password should match!";</script>';
+			unset($_POST['btn']);
 		}
 		elseif(!preg_match("/^[a-zA-z]*$/", $fname )||!preg_match ("/^[a-zA-z]*$/", $lname)){  
-    		echo "Only alphabets and whitespace are allowed in name.";  
+			// echo "Only alphabets and whitespace are allowed in name."; 
+			echo '<script>document.getElementById("alertta").style.display="block";
+			document.getElementById("alertta").textContent="Only alphabets and whitespace are allowed in name.";</script>';
+			unset($_POST['btn']);
 		}
 		elseif (!preg_match ("/^[0-9]*$/", $phone)){  
-     		echo "Only numeric value is allowed in Phone number.";  
+			//  echo "Only numeric value is allowed in Phone number.";
+			 echo '<script>document.getElementById("alertta").style.display="block";
+			 document.getElementById("alertta").textContent="Only numeric value is allowed in Phone number.";</script>';
+			 unset($_POST['btn']);
+			 
 		}
-		elseif( $length < 10 && $length > 10) {    
-            echo "Phone number must have 10 digits.";  
+		elseif( $mobileno < 10 || $mobileno > 10) {    
+			// echo "Phone number must have 10 digits.";
+			echo '<script>document.getElementById("alertta").style.display="block";
+			document.getElementById("alertta").textContent="Phone number must have 10 digits.";</script>';
+			unset($_POST['btn']);
 		}
 		else {
-			$sql = "INSERT INTO `users`( `fname`, `lname`, `email`, `pass`,`phone`,`type`) VALUES('$fname','$lname','$email','$pass','$phone','$type')" ;
-			$q = mysqli_query($conn , $sql) ;
-			if ($q) {
-				$_SESSION['user_id'] = $q['id'] ;
+			$sql = "INSERT INTO `users`( `fname`, `lname`, `email`, `pass`,`phone`,`type`,`img`) VALUES('$fname','$lname','$email','$pass','$phone','$type','images/defUser.png')" ;
+			// $q = mysqli_query($conn , $sql) ;
+			if ($conn->query($sql) === TRUE) {
+			// if ($q) {
+				$sql = "SELECT * FROM users WHERE email = '$email' AND pass = '$pass'" ;
+				$q = mysqli_query($conn , $sql) ;
+				$data = mysqli_fetch_assoc($q) ;
+				$count = mysqli_num_rows($q) ;
+				if ($count == 1) {
+					$_SESSION['user_id'] = $data['id'];
+					$_SESSION['fname'] = $data['fname'];
+					$_SESSION['lname'] = $data['lname'];
+					$_SESSION['img'] = $data['img'];
+					$_SESSION['phone'] = $data['phone'];
+					$_SESSION['email'] = $data['email'];
+					$_SESSION['type'] = $data['type'] ;	
+		   		}
 				if($type =='1'){
 
 					header("Location: index.php");
@@ -53,11 +82,16 @@ if(isset($_POST['btn'])){
 					header("Location: index2.php");
 					
 				}else{
-					echo "Something wrong";
+					// echo "Something wrong";
+					echo '<script>document.getElementById("alertta").style.display="block";
+					document.getElementById("alertta").textContent="Something wrong";</script>';
+					unset($_POST['btn']);
 				}
 			}
 			else {
-				echo "Invalid Data" ;
+				echo '<script>document.getElementById("alertta").style.display="block";
+				document.getElementById("alertta").textContent="Invalid Data";</script>';
+				unset($_POST['btn']);
 			}
 		}
  
@@ -69,7 +103,7 @@ if(isset($_POST['btn'])){
 				
 				<!-- Welcome Text -->
 				<div class="welcome-text">
-					<h3>Lets create your account!</h3>
+					<h3 style="font-family: 'Dancing Script', cursive;">Lets create your account!</h3>
 				</div>
 					
 				<!-- Form -->
@@ -112,8 +146,8 @@ if(isset($_POST['btn'])){
 					</div>
 					
 					<div class="form-check">
-  						<input class="form-check-input" type="checkbox" value=""name="check" id="defaultCheck1"/>
-  						<label for="defaultCheck1">
+  						<input class="form-check-input input-text with-border" type="checkbox" value=""name="check" id="defaultCheck1" style="margin-left:100px;"/>
+  						<label for="defaultCheck1" style="font-size:18px;">
     						Register as a volunteer
   						</label>
 					</div>

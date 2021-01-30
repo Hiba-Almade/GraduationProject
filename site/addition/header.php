@@ -1,3 +1,15 @@
+<?php
+session_start();
+$href;
+$ty=$_SESSION['type'];
+echo $ty;
+if($_SESSION['type'] ==1){
+	$href="index.php";
+}elseif($_SESSION['type']==0){
+	$href="index2.php";
+}
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -36,13 +48,13 @@
 				
 				<!-- Logo -->
 				<div id="logo">
-					<a href="index.html"><img src="" alt="logo pic"></a>
+					<a href="#"><img src="images/logo.png" alt="logo pic"></a>
 				</div>
 
 				<!-- Main Navigation -->
 				<nav id="navigation">
 					<ul id="responsive">
-						<li><a href="#" class="current">Home</a></li>
+						<li><a href=<?php echo $href;?> class="current">Home</a></li>
 						<li><a href="about.php">About</a></li>
 						<li><a href="contact.php">Contact</a></li>
 					</ul>
@@ -60,7 +72,7 @@
 					<!-- Messages -->
 					<div class="header-notifications user-menu">
 						<div class="header-notifications-trigger">
-							<a href="#"><div class="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" alt=""></div></a>
+							<a href="#"><div class="user-avatar status-online"><img src="<?=$_SESSION['img']?>" alt=""></div></a>
 						</div>
 
 						<!-- Dropdown -->
@@ -71,16 +83,16 @@
 
 								<!-- User Name / Avatar -->
 								<div class="user-details">
-									<div class="user-avatar "><img src="images/user-avatar-small-01.jpg" alt=""></div>
+									<div class="user-avatar "><img src="<?=$_SESSION['img']?>" alt=""></div>
 									<div class="user-name">
-										Tom Smith
+										<?=$_SESSION['fname']." ".$_SESSION['lname']?>
 									</div>
 								</div>	
 						</div>
 						
 						<ul class="user-menu-small-nav">
 							<li><a href="setting.php"><i class="icon-material-outline-settings"></i> Settings</a></li>
-							<li><a href="home.php"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
+							<li><a href="logout.php"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
 						</ul>
 
 						

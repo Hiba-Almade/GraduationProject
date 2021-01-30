@@ -752,7 +752,7 @@ a.header-notifications-button i {
 	content: "";
 	height: 12px;
 	width: 12px;
-	background-color: #c0c0c0;
+	background-color: #38b653;
 	bottom: 0;
 	right: 0;
 	display: block;
@@ -6443,7 +6443,7 @@ table.basic-table { margin-bottom: 0; }
 	display: block;
 	box-sizing: border-box;
 	padding: 15px 25px;
-	color: #fff;
+	color: #000;
 	font-weight: 500;
 	text-decoration: none;
 }

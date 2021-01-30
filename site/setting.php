@@ -17,7 +17,8 @@
 	================================================== -->
 	<div class="dashboard-content-container" data-simplebar>
 		<div class="dashboard-content-inner" >
-			
+		<p id='alertta' style="display:none;" class='alert alert-danger'></p>
+
 			<!-- Dashboard Headline -->
 			<div class="dashboard-headline">
 				<h3>Settings</h3>
@@ -29,6 +30,8 @@
 			<div class="row">
 
 				<!-- Dashboard Box -->
+				<!-- <form action="" method="post"> -->
+				<form action="updateInfo.php" method="post" enctype="multipart/form-data">
 				<div class="col-xl-12">
 					<div class="dashboard-box margin-top-0">
 
@@ -43,11 +46,13 @@
 
 								<div class="col-auto">
 									<div class="avatar-wrapper" data-tippy-placement="bottom" title="Change Avatar">
-										<img class="profile-pic" src="images/user-avatar-placeholder.png" alt="" />
+										<img class="profile-pic" src="<?= $_SESSION['img']?>" alt="" />
 										<div class="upload-button"></div>
-										<input class="file-upload" type="file" accept="image/*"/>
+										<input type="file" name="fileToUpload" class="file-upload" id="fileToUpload">
+
 									</div>
 								</div>
+
 
 								<div class="col">
 									<div class="row">
@@ -55,14 +60,14 @@
 										<div class="col-xl-6">
 											<div class="submit-field">
 												<h5>First Name</h5>
-												<input type="text" class="with-border" value="Tom">
+												<input name="fname" type="text" class="with-border" value="<?= $_SESSION['fname']?>">
 											</div>
 										</div>
 
 										<div class="col-xl-6">
 											<div class="submit-field">
 												<h5>Last Name</h5>
-												<input type="text" class="with-border" value="Smith">
+												<input  name="lname" type="text" class="with-border" value="<?= $_SESSION['lname']?>">
 											</div>
 										</div>
 
@@ -72,7 +77,7 @@
 												<div class="account-type">
 													<div class="submit-field">
 												<h5>Phone number</h5>
-												<input type="text" class="with-border" value="123">
+												<input name="phone" type="text" class="with-border" value="<?= $_SESSION['phone']?>">
 											</div>
 
 												</div>
@@ -82,20 +87,31 @@
 										<div class="col-xl-6">
 											<div class="submit-field">
 												<h5>Email</h5>
-												<input type="text" class="with-border" value="tom@example.com">
+												<input name="email" type="text" class="with-border" value="<?= $_SESSION['email']?>">
 											</div>
 										</div>
 
 									</div>
 								</div>
+								<div class="col-xl-12">
+								<!-- <input type="submit" class="button ripple-effect big margin-top-30" value="Save Changes" name="info"> -->
+								<input class="button ripple-effect big margin-top-30" type="submit" value="Save Changes" name="info">
+								</div>
 							</div>
-
 						</div>
 					</div>
 				</div>
+				</form>
 
 
+
+				<?php
+					// if(isset($_POST['info'])){
+					// 	var_dump($_FILES);
+					// }
+				?>
 				<!-- Dashboard Box -->
+				<form action="updateInfo.php" method="post" enctype="multipart/form-data">
 				<div class="col-xl-12">
 					<div id="test1" class="dashboard-box">
 
@@ -109,38 +125,35 @@
 								<div class="col-xl-4">
 									<div class="submit-field">
 										<h5>Current Password</h5>
-										<input type="password" class="with-border">
+										<input name="pass1" type="password" class="with-border">
 									</div>
 								</div>
 
 								<div class="col-xl-4">
 									<div class="submit-field">
 										<h5>New Password</h5>
-										<input type="password" class="with-border">
+										<input name="pass2" type="password" class="with-border">
 									</div>
 								</div>
 
 								<div class="col-xl-4">
 									<div class="submit-field">
 										<h5>Repeat New Password</h5>
-										<input type="password" class="with-border">
+										<input name="pass3" type="password" class="with-border">
 									</div>
+								</div>
+								<!-- Button -->
+								<div class="col-xl-12">
+								<input name="chpass" type="submit" class="button ripple-effect big margin-top-30" value="Change Password">
 								</div>
 
-								<div class="col-xl-12">
-									<div class="checkbox">
-										<input type="checkbox" id="two-step" checked>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				</form>
 				
-				<!-- Button -->
-				<div class="col-xl-12">
-					<a href="#" class="button ripple-effect big margin-top-30">Save Changes</a>
-				</div>
+
 
 			</div>
 			<!-- Row / End -->
@@ -149,7 +162,7 @@
 			<div class="dashboard-footer-spacer"></div>
 			<div class="small-footer margin-top-15">
 				<div class="small-footer-copyrights">
-					© 2018 <strong>Hireo</strong>. All Rights Reserved.
+				<strong>© 2021 </strong>. All Rights Reserved.
 				</div>
 				<ul class="footer-social-links">
 					<li>

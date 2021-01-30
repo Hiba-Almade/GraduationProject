@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,6 +13,7 @@
 
 <!-- CSS
 ================================================== -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/style2.css">
 <link rel="stylesheet" href="css/colors/blue.css">
@@ -65,7 +69,7 @@
 <div class="clearfix"></div>
 <!-- Header Container / End -->
 
-
+<p id='alertta' style="display:none;" class='alert alert-danger'></p>
 
 <!-- Intro Banner
 ================================================== -->
@@ -85,7 +89,7 @@
 		<h3>Welcome to our site to help <span style="text-decoration: underline;">THE BLIND</span></h3>
 		<p>If you need help or would like to help others, you have found the right place for it.</p>
 		<br>
-		<button>READ MORE</button>
+		<a href="about2.php"><button>READ MORE</button></a>
 	</div>
 	</header>
 

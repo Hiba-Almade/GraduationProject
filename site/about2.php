@@ -1,4 +1,25 @@
-<?php include "addition/header.php";?>
+<html lang="en">
+<head>
+
+<!-- Basic Page Needs
+================================================== -->
+<title></title>
+<meta charset="utf-8">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- CSS
+================================================== -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/colors/blue.css">
+<link rel="stylesheet" href="css/style2.css">
+
+</head>
+<body>
+
 <!-- Titlebar
 ================================================== -->
 <div class="single-page-header">
@@ -93,7 +114,7 @@
 
 
 <!-- Spacer -->
-<div class="margin-top-15"></div>
+<div class="margin-top-15"><a href="home.php"><button>Back to Home Page</button></a></div>
 <!-- Spacer / End-->
 
 <!-- Footer
@@ -131,20 +152,6 @@ $('#snackbar-user-status label').click(function() {
 	}); 
 }); 
 
-// Snackbar for "place a bid" button
-$('#snackbar-place-bid').click(function() { 
-	Snackbar.show({
-		text: 'Your bid has been placed!',
-	}); 
-}); 
-
-
-// Snackbar for copy to clipboard button
-$('.copy-url-button').click(function() { 
-	Snackbar.show({
-		text: 'Copied to clipboard!',
-	}); 
-}); 
 </script>
 
 <!-- Google API & Maps -->

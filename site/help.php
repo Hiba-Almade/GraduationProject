@@ -1,7 +1,5 @@
 <?php 
 include 'php/config.php';
-
-
 session_start() ;
 
 if (!isset($_SESSION['user_id'])) {
@@ -13,9 +11,12 @@ $user_id=$_SESSION['user_id'];
 if(isset($_POST['btn'])){
  
 	$title = $_POST['title'] ;
-	$dime= $_POST['time'] ;
+	$rawdate = htmlentities($_POST['time']);
+	$date = date('Y-m-d', strtotime($rawdate));
+
+	echo "<h1><br><br><br><br><br>".$date."</h1>";
 	$body = $_POST['body'] ;
-    $sql = "INSERT INTO `posts`(`title`,`time`, `body`, `user_id`) VALUES ( '$title' ,'$time', '$body' , '$user_id')" ;
+    $sql = "INSERT INTO `posts`(`title`,`time`, `body`, `user_id`) VALUES ( '$title' ,'$date', '$body' , '$user_id')" ;
 	$q = mysqli_query($conn , $sql) ;
 	if ($q) {
         echo "post inserted successfully " ;

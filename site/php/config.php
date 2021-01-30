@@ -1,3 +1,4 @@
+
 <?php 
 $server = 'localhost' ;
 $username = 'root' ;
@@ -8,3 +9,7 @@ if(!$conn){
 	die("Failed connection !") ;
 }
 ?>
+
+
+
+
